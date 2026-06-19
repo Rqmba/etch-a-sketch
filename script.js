@@ -6,6 +6,10 @@ function createDiv() {
     const square = document.createElement("div");
     square.classList.add("square");
     currentDiv.appendChild(square);
+    square.addEventListener("mouseover", () => {
+      square.style.backgroundColor = "red";
+      // J'ai mis red mais t'as compris l'idée
+    });
   }
 }
 
