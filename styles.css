@@ -1,0 +1,15 @@
+#newDiv {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  /* La border pour voir la grille  */
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  /* La border pour voir la grille  */
+  box-sizing: border-box;
+}
