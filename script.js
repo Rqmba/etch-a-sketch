@@ -10,8 +10,7 @@ function createDiv(gridSize) {
     square.style.height = sizeSquare + "px";
     square.style.width = sizeSquare + "px";
     square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "red";
-      // J'ai mis red mais t'as compris l'idée
+      gridColor(square);
     });
   }
 }
@@ -23,6 +22,14 @@ function chooseSize() {
     currentDiv.innerHTML = "";
     createDiv(size);
   }
+}
+
+function gridColor(color) {
+  let red = Math.floor(Math.random() * 255);
+  let blue = Math.floor(Math.random() * 255);
+  let green = Math.floor(Math.random() * 255);
+
+  color.style.backgroundColor = `rgb(${red},${blue}, ${green})`;
 }
 
 gridButton.addEventListener("click", () => chooseSize());
