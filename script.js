@@ -6,11 +6,16 @@ function createDiv(gridSize) {
     const square = document.createElement("div");
     square.classList.add("square");
     currentDiv.appendChild(square);
+    square.opacity = 0.1;
     let sizeSquare = 960 / gridSize;
     square.style.height = sizeSquare + "px";
     square.style.width = sizeSquare + "px";
     square.addEventListener("mouseover", () => {
       gridColor(square);
+      if (square.opacity < 1) {
+        square.opacity = square.opacity + 0.1;
+      }
+      square.style.opacity = square.opacity;
     });
   }
 }
